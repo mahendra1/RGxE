@@ -1,0 +1,541 @@
+[1] ""
+[1] ""
+[1] "#############      Print date and time     #################"
+[1] ""
+[1] "2016-02-28 22:55:20 EST"
+[1] ""
+[1] "########################################################################"
+[1] "###           Section 1: Identify level of significance of           ###"
+[1] "###              different effects, variances and BLUP               ###"
+[1] "########################################################################"
+[1] ""
+[1] ""
+[1] "########################################################################"
+[1] "###                ANOVA - ANALYSIS OF VARIANCE                     ####"
+[1] "########################################################################"
+[1] ""
+[1] "########################################################################"
+[1] "##            ANOVA Case 1: CLT, YR, LC and RP - All Random           ##"
+[1] "########################################################################"
+[1] ""
+[1] "##Print ANOVA"
+[1] "#Note: P values are generated using LRT-Likelihood Ratio Test via "
+[1] "#model comparison and anova"
+[1] ""
+       sov Variance  stddev   Pr_Chisq
+ YR:LC:CLT   49.730  7.0519 8.8942e-03
+    LC:CLT    0.000  0.0000         NA
+      RPid   73.914  8.5973 4.1458e-07
+    YR:CLT    0.000  0.0000         NA
+     YR:LC   57.813  7.6035 7.8725e-02
+       CLT  111.697 10.5687 1.3867e-03
+        LC  699.569 26.4494 9.0836e-03
+        YR    0.000  0.0000         NA
+  Residual  327.526 18.0977         NA
+[1] ""
+[1] "##Print BLUP-Best linear unbiased predictor value for random genotypes"
+[1] ""
+           genotype    Blup
+        CalhounGray  9.2875
+       CrimsonSweet  4.8551
+        EarlyCanada  2.1599
+           FiestaF1 19.6030
+ GeorgiaRattlesnake 13.0303
+             Legacy 10.7369
+           Mickylee  3.6197
+           Quetzali  1.0643
+        StarbriteF1 25.7417
+          SugarBaby -6.5112
+[1] ""
+[1] "########################################################################"
+[1] "##         ANOVA Case 2: CLT, YR and LC - Fixed; RP - Random          ##"
+[1] "########################################################################"
+[1] ""
+[1] "##Print ANOVA"
+[1] "#Note: P values are computed for F ratio using KR method "
+[1] "#Kenward-Rogers approximation for degrees of freedom"
+[1] ""
+       sov Df   Sum_Sq   Mean_Sq  F_value     Prob_F  stddev
+        YR  1   120.47   120.470  0.36782 5.4876e-01      NA
+        LC  4 73133.52 18283.381 55.82263 1.8011e-13      NA
+       CLT  9 44948.85  4994.317 15.24860 4.8887e-20      NA
+     YR:LC  4  5372.94  1343.235  4.10115 9.0767e-03      NA
+    YR:CLT  9  4564.93   507.215  1.54862 1.3095e-01      NA
+    LC:CLT 36 15018.72   417.187  1.27375 1.4552e-01      NA
+ YR:LC:CLT 36 23058.48   640.513  1.95561 1.5170e-03      NA
+      RPid NA       NA    73.914       NA         NA  8.5973
+  Residual NA       NA   327.526       NA         NA 18.0977
+[1] ""
+[1] "########################################################################"
+[1] "##          ANOVA Case 3: CLT - Fixed; YR, LC and RP - Random         ##"
+[1] "########################################################################"
+[1] ""
+[1] "##Print ANOVA"
+[1] "#Note: For fixed effects P values are computed for F ratio using "
+[1] "#KR method Kenward-Rogers approximation for degrees of freedom"
+[1] ""
+ sov Df Sum_Sq Mean_Sq F_value   Prob_F
+ CLT  9  27965  3107.2  9.4869 0.006365
+[1] ""
+[1] "#For random effect P values are generated using LRT-Likelihood Ratio Test "
+[1] "#via model comparison and anova"
+[1] ""
+       sov Mean_Sq  stddev   Pr_Chisq
+ YR:LC:CLT  49.730  7.0519 2.7248e-02
+    LC:CLT   0.000  0.0000         NA
+      RPid  73.914  8.5973 4.1458e-07
+    YR:CLT   0.000  0.0000         NA
+     YR:LC  57.813  7.6035 6.7765e-02
+        LC 699.573 26.4495 9.4460e-03
+        YR   0.000  0.0000         NA
+  Residual 327.526 18.0977         NA
+[1] ""
+[1] "########################################################################"
+[1] "##         ANOVA Case 4: LC - Fixed; YR, CLT and RP - Random          ##"
+[1] "########################################################################"
+[1] ""
+[1] "##Print ANOVA"
+[1] "#Note: For fixed effects P values are computed for F ratio using"
+[1] "#KR method Kenward-Rogers approximation for degrees of freedom"
+[1] ""
+ sov Df Sum_Sq Mean_Sq F_value    Prob_F
+  LC  4  21802  5450.4  16.641 0.0094205
+[1] ""
+[1] "#For random effect P values are generated using LRT-Likelihood Ratio Test"
+[1] "#via model comparison and anova"
+[1] ""
+       sov Mean_Sq  stddev   Pr_Chisq
+ YR:LC:CLT  49.730  7.0519 8.2124e-03
+    LC:CLT   0.000  0.0000         NA
+      RPid  73.914  8.5973 4.1458e-07
+    YR:CLT   0.000  0.0000         NA
+     YR:LC  57.813  7.6035 3.9804e-01
+       CLT 111.697 10.5687         NA
+        YR   0.000  0.0000         NA
+  Residual 327.526 18.0977         NA
+[1] ""
+[1] "########################################################################"
+[1] "##        ANOVA Case 5: CLT and LC - Fixed; YR, and RP - Random       ##"
+[1] "########################################################################"
+[1] ""
+[1] "##Print ANOVA"
+[1] "#Note: For fixed effects P values are computed for F ratio using "
+[1] "#KR method Kenward-Rogers approximation for degrees of freedom"
+[1] ""
+    sov Df  Sum_Sq Mean_Sq  F_value    Prob_F
+    CLT  9 23982.8 2664.76  8.13600 0.0022680
+     LC  4 21801.7 5450.43 16.64120 0.0092754
+ CLT:LC 36  8013.4  222.59  0.67962 0.8743361
+[1] ""
+[1] "#For random effect P values are generated using LRT-Likelihood Ratio Test"
+[1] "#via model comparison and anova"
+[1] ""
+       sov Mean_Sq  stddev   Pr_Chisq
+ YR:LC:CLT  71.582  8.4606 1.0000e+00
+      RPid  73.914  8.5973 1.3054e-07
+    YR:CLT   0.000  0.0000         NA
+     YR:LC  55.628  7.4584 2.9757e-01
+        YR   0.000  0.0000         NA
+  Residual 327.526 18.0977         NA
+[1] ""
+[1] ""
+[1] "########################################################################"
+[1] "###       Section 2: Identify general statistcs (mean and CV) of     ###"
+[1] "###       genotype, location, year, replication and environment      ###"
+[1] "########################################################################"
+[1] ""
+[1] ""
+[1] "########################################################################"
+[1] "###                     Descriptive Statistics                       ###"
+[1] "########################################################################"
+[1] ""
+[1] "#Descriptive Statistics - Means and CV"
+[1] ""
+[1] "#trait mean across genotype and environment(location x year combination)"
+[1] ""
+                CLT CI-2009 CI-2010 FL-2009 FL-2010 KN-2009 KN-2010 SC-2009 SC-2010 TX-2009 TX-2010
+        CalhounGray  64.590  81.502 106.663 121.151  68.767  70.805 104.374  89.694  48.932 17.0135
+       CrimsonSweet  25.775  73.046 110.511  65.791  62.960  57.561  74.870 112.900  21.176 15.5362
+        EarlyCanada  50.939  55.320  90.613 116.482  57.051  55.421  55.767  74.885  21.744 11.7770
+           FiestaF1  69.379  81.298 109.561  99.026  80.178  67.647  89.577 123.786  42.324 22.2093
+ GeorgiaRattlesnake  52.671  72.843 102.128 109.443  69.990  62.960  87.217  79.128  62.326 12.8060
+             Legacy  52.467  66.323 105.471  89.036  81.298  72.435  88.606  63.556  50.802 15.8825
+           Mickylee  49.410  59.089  78.977 113.275  70.194  51.448  82.658  48.035  40.334 12.8977
+           Quetzali  40.751  62.757  79.424  87.583  61.432  48.697  79.719  77.865  29.735  9.7903
+        StarbriteF1  77.936  84.457 125.971 120.292  70.601  79.974 112.504 102.433  57.339 22.0972
+          SugarBaby  42.381  57.866  80.657  91.010  37.491  48.799  53.531  52.595  18.116 10.6258
+[1] ""
+[1] "#trait mean across genotype and years"
+[1] ""
+                CLT   2009   2010
+        CalhounGray 78.665 76.033
+       CrimsonSweet 59.059 64.967
+        EarlyCanada 55.223 62.777
+           FiestaF1 78.204 78.793
+ GeorgiaRattlesnake 74.866 67.436
+             Legacy 75.729 61.447
+           Mickylee 64.314 56.949
+           Quetzali 58.212 57.338
+        StarbriteF1 88.870 81.850
+          SugarBaby 46.435 52.179
+[1] ""
+[1] "#trait mean across genotype and location"
+[1] ""
+                CLT     CI      FL     KN      SC     TX
+        CalhounGray 73.046 113.907 69.786  97.034 32.973
+       CrimsonSweet 49.411  88.151 60.261  93.885 18.356
+        EarlyCanada 53.129 103.548 56.236  65.326 16.761
+           FiestaF1 75.338 104.294 73.912 106.682 32.266
+ GeorgiaRattlesnake 62.757 105.786 66.475  83.173 37.566
+             Legacy 59.395  97.253 76.867  76.081 33.342
+           Mickylee 54.250  96.126 60.821  65.347 26.616
+           Quetzali 51.754  83.503 55.065  78.792 19.763
+        StarbriteF1 81.196 123.132 75.288 107.468 39.718
+          SugarBaby 50.124  85.834 43.145  53.063 14.371
+[1] ""
+[1] "#trait mean across genotype, location and year"
+[1] ""
+                CLT   YR     CI      FL     KN      SC      TX
+        CalhounGray 2009 64.590 106.663 68.767 104.374 48.9320
+        CalhounGray 2010 81.502 121.151 70.805  89.694 17.0135
+       CrimsonSweet 2009 25.775 110.511 62.960  74.870 21.1758
+       CrimsonSweet 2010 73.046  65.791 57.561 112.900 15.5362
+        EarlyCanada 2009 50.939  90.613 57.051  55.767 21.7445
+        EarlyCanada 2010 55.320 116.482 55.421  74.885 11.7770
+           FiestaF1 2009 69.379 109.561 80.178  89.577 42.3235
+           FiestaF1 2010 81.298  99.026 67.647 123.786 22.2093
+ GeorgiaRattlesnake 2009 52.671 102.128 69.990  87.217 62.3257
+ GeorgiaRattlesnake 2010 72.843 109.443 62.960  79.128 12.8060
+             Legacy 2009 52.467 105.471 81.298  88.606 50.8020
+             Legacy 2010 66.323  89.036 72.435  63.556 15.8825
+           Mickylee 2009 49.410  78.977 70.194  82.658 40.3335
+           Mickylee 2010 59.089 113.275 51.448  48.035 12.8977
+           Quetzali 2009 40.751  79.424 61.432  79.719 29.7353
+           Quetzali 2010 62.757  87.583 48.697  77.865  9.7903
+        StarbriteF1 2009 77.936 125.971 70.601 112.504 57.3388
+        StarbriteF1 2010 84.457 120.292 79.974 102.433 22.0972
+          SugarBaby 2009 42.381  80.657 37.491  53.531 18.1155
+          SugarBaby 2010 57.866  91.010 48.799  52.595 10.6258
+[1] ""
+[1] "#trait mean across genotype, location and replication"
+[1] ""
+                CLT RP     CI      FL      KN      SC      TX
+        CalhounGray  1 98.413  95.809  62.349  89.448 54.4325
+        CalhounGray  2 69.684 136.038  55.625 103.293 25.3965
+        CalhounGray  3 59.292 118.781  70.296  87.128 15.2330
+        CalhounGray  4 64.794 105.000  90.875 108.266 36.8290
+       CrimsonSweet  1 37.491  39.581  62.349  79.465 31.2560
+       CrimsonSweet  2 59.293 130.710  58.885  94.685 13.5540
+       CrimsonSweet  3 63.979  93.970  55.218 109.528 19.0985
+       CrimsonSweet  4 36.880  88.343  64.591  91.863  9.5155
+        EarlyCanada  1 64.386 104.058  51.346  72.465 10.1675
+        EarlyCanada  2 45.233 107.547  52.772  59.435 15.2815
+        EarlyCanada  3 61.331 104.386  48.901  59.649 27.9405
+        EarlyCanada  4 41.566  98.200  71.925  69.755 13.6535
+           FiestaF1  1 78.650  67.163  70.703 111.038 51.4160
+           FiestaF1  2 70.499 145.651  72.944 117.007 31.7220
+           FiestaF1  3 63.164  97.226  82.114  98.525 18.9710
+           FiestaF1  4 89.041 107.133  69.888 100.156 26.9565
+ GeorgiaRattlesnake  1 70.499  95.776  61.941  84.538 49.4325
+ GeorgiaRattlesnake  2 60.923 106.091  61.738  78.721 58.1390
+ GeorgiaRattlesnake  3 58.274 105.629  74.167  69.766 13.2595
+ GeorgiaRattlesnake  4 61.331 115.646  68.054  99.667 29.4325
+             Legacy  1 64.794  80.311  66.424  84.233 48.1675
+             Legacy  2 41.159 104.211  71.315  82.887 37.6610
+             Legacy  3 55.829  97.647  87.614  68.635 29.0530
+             Legacy  4 75.797 106.844  82.113  68.570 18.4875
+           Mickylee  1 51.550  95.789  54.810  72.913 53.3065
+           Mickylee  2 60.923 107.262  72.333  59.385 21.7000
+           Mickylee  3 36.880  95.143  59.700  63.388 19.0495
+           Mickylee  4 67.647  86.310  56.440  65.701 12.4065
+           Quetzali  1 64.590  73.935  53.587  94.370 27.9930
+           Quetzali  2 53.791 101.604  50.328  75.674 22.7275
+           Quetzali  3 50.939  79.901  47.883  62.777 18.2570
+           Quetzali  4 37.694  78.573  68.462  82.347 10.0735
+        StarbriteF1  1 71.722  76.359  54.199  80.066 40.4225
+        StarbriteF1  2 86.189 124.965  70.296 110.171 61.3850
+        StarbriteF1  3 90.875 126.852  70.296 103.640 31.6680
+        StarbriteF1  4 76.001 164.350 106.361 135.996 25.3965
+          SugarBaby  1 60.923  71.728  35.861  59.690 12.6045
+          SugarBaby  2 58.070  94.041  30.563  52.498 15.8565
+          SugarBaby  3 36.472  85.855  50.735  53.883 13.8400
+          SugarBaby  4 45.029  91.711  55.421  46.181 15.1815
+[1] ""
+[1] "#trait mean across location and year"
+[1] ""
+ LC   2009    2010
+ CI 52.630  69.450
+ FL 98.998 101.309
+ KN 65.996  61.575
+ SC 82.882  82.488
+ TX 39.283  15.064
+[1] ""
+[1] "#trait mean across location and replication"
+[1] ""
+ LC      1       2       3       4
+ CI 66.302  60.576  57.703  59.578
+ FL 80.051 115.812 100.539 104.211
+ KN 57.357  59.680  64.692  73.413
+ SC 82.823  83.376  77.692  86.850
+ TX 37.920  30.342  20.637  19.793
+[1] ""
+[1] "#trait mean across location"
+[1] ""
+ LC   Trait
+ CI  61.040
+ FL 100.153
+ KN  63.786
+ SC  82.685
+ TX  27.173
+[1] ""
+[1] "#trait mean across year"
+[1] ""
+   YR  Trait
+ 2009 67.958
+ 2010 65.977
+[1] ""
+[1] "#trait mean across genotype"
+[1] ""
+                CLT  Trait
+        CalhounGray 77.349
+       CrimsonSweet 62.013
+        EarlyCanada 59.000
+           FiestaF1 78.498
+ GeorgiaRattlesnake 71.151
+             Legacy 68.588
+           Mickylee 60.632
+           Quetzali 57.775
+        StarbriteF1 85.360
+          SugarBaby 49.307
+[1] ""
+[1] "#trait mean across environment"
+[1] ""
+     ENV   Trait
+ CI-2009  52.630
+ CI-2010  69.450
+ FL-2009  98.998
+ FL-2010 101.309
+ KN-2009  65.996
+ KN-2010  61.575
+ SC-2009  82.882
+ SC-2010  82.488
+ TX-2009  39.283
+ TX-2010  15.064
+[1] ""
+[1] "#trait coefficient of variation (cv) across gentoype and location"
+[1] ""
+                CLT     CI     FL     KN     SC     TX
+        CalhounGray 31.949 23.999 32.158 16.135 83.562
+       CrimsonSweet 62.295 49.664 13.229 30.140 66.446
+        EarlyCanada 21.952 15.884 29.933 30.311 70.379
+           FiestaF1 21.779 43.048 13.199 22.666 56.006
+ GeorgiaRattlesnake 19.610 20.215 10.081 38.647 94.577
+             Legacy 29.606 27.040 15.967 24.143 71.471
+           Mickylee 29.351 21.866 25.915 33.958 99.438
+           Quetzali 31.077 21.406 21.994 22.743 75.846
+        StarbriteF1 21.454 30.106 31.218 21.508 65.571
+          SugarBaby 28.754 13.669 30.860 20.260 33.650
+[1] ""
+[1] "trait sum across genotype and location"
+[1] ""
+                CLT     CI     FL     KN     SC     TX
+        CalhounGray 584.37 911.26 558.29 776.27 263.78
+       CrimsonSweet 395.29 705.21 482.08 751.08 146.85
+        EarlyCanada 425.03 828.38 449.89 522.61 134.09
+           FiestaF1 602.71 834.35 591.30 853.45 258.13
+ GeorgiaRattlesnake 502.05 846.28 531.80 665.38 300.53
+             Legacy 475.16 778.03 614.93 608.65 266.74
+           Mickylee 434.00 769.01 486.57 522.77 212.93
+           Quetzali 414.03 668.03 440.52 630.34 158.10
+        StarbriteF1 649.57 985.05 602.30 859.74 317.74
+          SugarBaby 400.99 686.67 345.16 424.50 114.97
+[1] ""
+[1] "trait sum across genotype, location and year"
+[1] ""
+                CLT   YR     CI     FL     KN     SC      TX
+        CalhounGray 2009 258.36 426.65 275.07 417.50 195.728
+        CalhounGray 2010 326.01 484.60 283.22 358.78  68.054
+       CrimsonSweet 2009 103.10 442.05 251.84 299.48  84.703
+       CrimsonSweet 2010 292.19 263.16 230.24 451.60  62.145
+        EarlyCanada 2009 203.75 362.45 228.20 223.07  86.978
+        EarlyCanada 2010 221.28 465.93 221.69 299.54  47.108
+           FiestaF1 2009 277.51 438.25 320.71 358.31 169.294
+           FiestaF1 2010 325.19 396.10 270.59 495.14  88.837
+ GeorgiaRattlesnake 2009 210.68 408.51 279.96 348.87 249.303
+ GeorgiaRattlesnake 2010 291.37 437.77 251.84 316.51  51.224
+             Legacy 2009 209.87 421.88 325.19 354.42 203.208
+             Legacy 2010 265.29 356.14 289.74 254.23  63.530
+           Mickylee 2009 197.64 315.91 280.77 330.63 161.334
+           Mickylee 2010 236.36 453.10 205.79 192.14  51.591
+           Quetzali 2009 163.00 317.69 245.73 318.88 118.941
+           Quetzali 2010 251.03 350.33 194.79 311.46  39.161
+        StarbriteF1 2009 311.75 503.89 282.40 450.01 229.355
+        StarbriteF1 2010 337.83 481.17 319.90 409.73  88.389
+          SugarBaby 2009 169.52 322.63 149.96 214.12  72.462
+          SugarBaby 2010 231.46 364.04 195.20 210.38  42.503
+[1] ""
+[1] "trait sum across genotype and year"
+[1] ""
+                CLT   2009   2010
+        CalhounGray 1573.3 1520.7
+       CrimsonSweet 1181.2 1299.3
+        EarlyCanada 1104.5 1255.5
+           FiestaF1 1564.1 1575.9
+ GeorgiaRattlesnake 1497.3 1348.7
+             Legacy 1514.6 1228.9
+           Mickylee 1286.3 1139.0
+           Quetzali 1164.2 1146.8
+        StarbriteF1 1777.4 1637.0
+          SugarBaby  928.7 1043.6
+[1] ""
+[1] "trait sum across genotype"
+[1] ""
+                CLT  Trait
+        CalhounGray 3094.0
+       CrimsonSweet 2480.5
+        EarlyCanada 2360.0
+           FiestaF1 3139.9
+ GeorgiaRattlesnake 2846.0
+             Legacy 2743.5
+           Mickylee 2425.3
+           Quetzali 2311.0
+        StarbriteF1 3414.4
+          SugarBaby 1972.3
+[1] ""
+[1] "trait standard deviation (sd) across genotype and location"
+[1] ""
+                CLT     CI     FL      KN     SC      TX
+        CalhounGray 23.337 27.336 22.4419 15.657 27.5527
+       CrimsonSweet 30.780 43.780  7.9720 28.297 12.1968
+        EarlyCanada 11.663 16.447 16.8332 19.801 11.7961
+           FiestaF1 16.408 44.896  9.7560 24.180 18.0711
+ GeorgiaRattlesnake 12.306 21.384  6.7012 32.143 35.5286
+             Legacy 17.584 26.297 12.2736 18.368 23.8302
+           Mickylee 15.923 21.019 15.7614 22.191 26.4661
+           Quetzali 16.084 17.875 12.1110 17.919 14.9893
+        StarbriteF1 17.420 37.069 23.5036 23.114 26.0434
+          SugarBaby 14.413 11.732 13.3147 10.750  4.8357
+[1] ""
+[1] "trait standard deviation (sd) across genotype, location and year"
+[1] ""
+                CLT   YR      CI      FL      KN      SC      TX
+        CalhounGray 2009 32.0192 32.1452 30.7113 11.6864 32.5363
+        CalhounGray 2010  7.4101 23.8823 15.1397 17.0801  5.7921
+       CrimsonSweet 2009 19.1151 28.5590  7.8283 23.4217 15.1403
+       CrimsonSweet 2010 18.8557 48.2005  8.2203 18.8560  9.8325
+        EarlyCanada 2009 13.8353 12.3116 23.6429 23.2914 15.9525
+        EarlyCanada 2010 10.6391  5.7846 10.0205 11.3460  1.9904
+           FiestaF1 2009 19.4961  6.6594  7.4503 10.2947 17.5309
+           FiestaF1 2010 12.3851 67.7116  7.8670 21.8657 13.5988
+ GeorgiaRattlesnake 2009  5.7280 17.4036  6.9186 41.5767 35.6340
+ GeorgiaRattlesnake 2010  7.0215 26.9899  4.8959 25.2695  6.3833
+             Legacy 2009 12.1090 19.9329 15.5727 16.8878 19.9047
+             Legacy 2010 21.1391 32.1907  7.5245  9.1512 10.7674
+           Mickylee 2009 21.8298  5.4043 18.3739 16.7378 33.4959
+           Mickylee 2010  7.2519 14.7424  2.7913  8.3460  3.2569
+           Quetzali 2009 11.7591 15.8267 10.3753 20.2266 15.1437
+           Quetzali 2010 11.9366 21.2281 11.2465 18.3803  5.4514
+        StarbriteF1 2009 24.6272 32.8501 30.6391 27.8233 25.5900
+        StarbriteF1 2010  8.5569 45.8879 17.0780 20.1214  9.9889
+          SugarBaby 2009 16.6566  7.8131 16.4254 14.9464  3.3705
+          SugarBaby 2010  6.8838 13.7355  7.6551  6.7591  2.4096
+[1] ""
+[1] "trait standard deviation (sd) across genotype and year"
+[1] ""
+                CLT   2009   2010
+        CalhounGray 34.861 37.410
+       CrimsonSweet 38.308 39.097
+        EarlyCanada 27.794 35.619
+           FiestaF1 25.759 45.569
+ GeorgiaRattlesnake 29.401 35.676
+             Legacy 26.536 30.055
+           Mickylee 25.412 34.015
+           Quetzali 24.665 30.835
+        StarbriteF1 36.771 40.298
+          SugarBaby 24.071 27.292
+[1] ""
+[1] "trait standard deviation (sd) across genotype"
+[1] ""
+                CLT  Trait
+        CalhounGray 35.716
+       CrimsonSweet 38.322
+        EarlyCanada 31.766
+           FiestaF1 36.537
+ GeorgiaRattlesnake 32.486
+             Legacy 28.904
+           Mickylee 29.870
+           Quetzali 27.564
+        StarbriteF1 38.243
+          SugarBaby 25.566
+[1] ""
+[1] ""
+[1] "########################################################################"
+[1] "###             Section 3: Choose stable and best genotype           ###"
+[1] "########################################################################"
+[1] ""
+[1] ""
+[1] "########################################################################"
+[1] "###                      Stability Statistics                        ###"
+[1] "########################################################################"
+[1] ""
+[1] "#Univariate statistics - mean, slope, deviation from regression,"
+[1] "#Shukla,Ecovalence, Kang"
+[1] ""
+           Genotype   Mean              SLOPE              DEVREG          SIGMA   SIGMA_SQUARE Ecovalence
+        CalhounGray 77.349   1.31693830164876    124.670028621208  61.346841 ns   15.761172 ns      279.75
+       CrimsonSweet 62.013   1.36454332357129 1450.03510073339*** 439.124582 ns  567.987945 ns     1488.64
+        EarlyCanada 59.000 0.320939654616631*   686.251275445017* 253.229481 ns  285.369649 ns      893.77
+           FiestaF1 78.498   1.58347941482123    657.873266033708 300.285026 ns  385.996807 ns     1044.35
+ GeorgiaRattlesnake 71.151  0.917198392144549    220.063304045718  52.212609 ns   44.863403 ns      250.52
+             Legacy 68.588   1.13392930476125    428.070344903385 287.393522 ns   262.48765 ns     1003.10
+           Mickylee 60.632  0.593584749858975   705.480966435745* 188.105058 ns  195.125992 ns      685.37
+           Quetzali 57.775  0.971528006198702    96.5321084597175  82.808549 ns   86.103189 ns      348.42
+        StarbriteF1 85.360   1.29338936247089    221.136796113672 157.240582 ns   78.371337 ns      586.61
+          SugarBaby 49.307 0.504469489907715*   332.181769968082* 264.187195 ns  308.429643 ns      928.84
+ YS_Kang
+   10 + 
+     4  
+     2  
+   11 + 
+    8 + 
+    7 + 
+     3  
+     1  
+   12 + 
+    -1  
+[1] ""
+[1] ""
+[1] "########################################################################"
+[1] "##    Section 4: Choose discriminative and representative location    ##"
+[1] "########################################################################"
+[1] ""
+[1] ""
+[1] "########################################################################"
+[1] "###       location statistics - genotype F ratio across location     ###"
+[1] "###                and environment; location correlation             ###"
+[1] "########################################################################"
+[1] ""
+[1] "#location value"
+[1] "# location mean, genotype F ratio across location,"
+[1] "#correlation of location with average location performace"
+[1] ""
+ Location    Mean FRatioGenotype       LocCorrelation
+       CI  61.040         4.1804 0.949049766419943***
+       FL 100.153         2.2579  0.864975641187942**
+       KN  63.786         4.6964 0.896401033871258***
+       SC  82.685         6.8813  0.87603982110229***
+       TX  27.173         2.9966  0.89062492518194***
+[1] ""
+[1] "#location value-genotype F ratio across location,"
+[1] ""
+     ENV FRatioGenotype
+ CI-2009         2.4015
+ CI-2010         3.3665
+ FL-2009         2.6914
+ FL-2010         1.7231
+ KN-2009         1.9999
+ KN-2010         6.3971
+ SC-2009         2.8729
+ SC-2010         8.0454
+ TX-2009         2.5003
+ TX-2010         1.4619
